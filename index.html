@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="is">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skráningarform</title>
+
+    <style>
+      input {
+        border: 2px solid black;
+        padding: 4px;
+      }
+
+      input:focus {
+        border-color: gold;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(59, 124, 170)">
+    <h1>Skráning</h1>
+
+    <form action="thankyou.html" method="GET">
+      <input type="hidden" name="source" value="signup_form" />
+
+      <label for="name">Fullt nafn *</label><br />
+      <input
+        id="name"
+        name="name"
+        type="text"
+        required
+        maxlength="50"
+        placeholder="nafnið þitt"
+        autocomplete="name"
+        autofocus
+      /><br /><br />
+
+      <label for="email">Netfang *</label><br />
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        placeholder="example@example.com"
+        autocomplete="email"
+        spellcheck="false"
+      /><br /><br />
+
+      <label for="password">Lykilorð *</label><br />
+      <input
+        id="password"
+        name="password"
+        type="password"
+        required
+        minlength="8"
+        maxlength="69"
+        placeholder="8 eða fleiri stafir"
+        autocomplete="new-password"
+      /><br /><br />
+
+      <label for="confirm_password">Staðfesting lykilorðs *</label><br />
+      <input
+        id="confirm_password"
+        name="confirm_password"
+        type="password"
+        required
+        minlength="8"
+        maxlength="69"
+        autocomplete="new-password"
+        placeholder="staðfesta lykilorð"
+      /><br /><br />
+
+      <label for="age">Aldur</label><br />
+      <input
+        id="age"
+        name="age"
+        type="number"
+        min="0"
+        inputmode="numeric"
+        placeholder="21"
+      />
+
+      <br /><br />
+
+      <p>Kyn</p>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Karl</label><br />
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Kona</label><br />
+      <input type="radio" id="other" name="gender" value="other" />
+      <label for="other">Annað</label>
+      <br />
+
+      <input type="checkbox" id="terms" name="terms" required />
+      <label for="terms">Ég samþykki skilmálana *</label><br /><br />
+
+      <input type="submit" value="Skrá mig" />
+    </form>
+
+    <p>* skyldureitir</p>
+  </body>
+</html>
